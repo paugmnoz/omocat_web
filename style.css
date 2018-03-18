@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Work Sans", sans-serif;
+}
+
+.logoCat {
+  width: 95%;
+  margin: auto;
+  padding-top: 1em;
+}
+
+.logoCat .icon {
+  width: 2.25%;
+  height: auto;
+  margin-right: 1em;
+}
+
+.logoCat a {
+  color: black;
+  font-weight: 900;
+  font-size: 30;
+  font-variant: small-caps;
+}
+
+.container .welcome {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.container .welcome .leftImgs {
+  width: 30% !important;
+  height: auto;
+  margin-top: 8em;
+  margin-bottom: 6.5em;
+  float: left;
+}
+
+.container .welcome .seasonQuote {
+  margin: 10em auto 0 auto;
+  z-index: 5;
+}
+
+.container .welcome .seasonQuote h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 40;
+  font-weight: 900;
+  background: salmon;
+}
+
+.container .welcome .seasonQuote h1.second {
+  margin-left: 1em;
+}
+
+.container .welcome .seasonQuote h1.third {
+  margin-left: 6em;
+}
+
+.container .welcome .rightImgs {
+  position: absolute;
+  float: right;
+  width: 37%;
+  height: auto;
+  margin-top: -4em;
+  margin-right: 120px;
+}
+
+.container .theTeam {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.container .theTeam .teamPhoto {
+  background-color: #ff4746;
+  height: 400px;
+  width: 50%;
+}
+
+.container .theTeam .teamPhoto h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 30;
+  font-weight: 900;
+  color: white;
+}
+
+.container .theTeam .teamPhoto h1.second {
+  margin-left: 1em;
+}
+
+.container .theTeam .teamPhoto img {
+  width: 50%;
+  margin: auto;
+}
+
+.container .theTeam .descriptionTeam {
+  width: 50%;
+  padding: 2em;
+}
+
+.container .theTeam .descriptionTeam h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 30;
+  font-weight: 900;
+  color: black;
+}
+
+.container .theTeam .descriptionTeam .description {
+  width: 60%;
+}
+
+.container .theTeam .descriptionTeam .description p {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 200;
+  font-size: 16;
+  margin-bottom: 1em;
+}
+
+.container .theTeam .descriptionTeam .rect {
+  width: 50px;
+  height: 10px;
+  background-color: #ff4746;
+}
+
+.container h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 30;
+  font-weight: 900;
+  color: black;
+}
+
+.container .services {
+  width: 80%;
+  margin: auto;
+  height: 500px;
+  background-color: #8672fa;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+}
+
+.container .services .service {
+  width: 20%;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: flex-start;
+}
+
+.container .services .service h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 22;
+  font-weight: 800;
+  font-variant: small-caps;
+  color: black;
+}
+
+.container .services .service img {
+  width: 100%;
+}
+
+.container .services .service .rect {
+  width: 100px;
+  height: 10px;
+  background-color: #ff4746;
+}
+
+.container .bestsellersGallery {
+  width: 100%;
+  background-color: #2bb8c0;
+}
+
+.container .bestsellersGallery h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 30;
+  font-weight: 900;
+  color: white;
+}
+
+.container .bestsellersGallery .gallery {
+  width: 100%;
+}
+
+.container .bestsellersGallery .gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.container .specifications {
+  width: 100%;
+  height: 500px;
+  background-color: #d6fa72;
+  display: flex;
+  flex-direction: row;
+}
+
+.container .specifications .stuffDetails {
+  width: 50%;
+  padding: 8em 2em 2em 10em;
+}
+
+.container .specifications .stuffDetails h1 {
+  margin-bottom: 1em;
+}
+
+.container .specifications .stuffDetails p {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16;
+  margin-bottom: 1em;
+}
+
+.container .specifications .product {
+  width: 50%;
+  background-color: #fbeb00;
+}
+
+.container .specifications .product img {
+  height: 100%;
+}
+
+.container .footer {
+  width: 100%;
+  height: 500px;
+  background-color: #8672fa;
+}
+/*# sourceMappingURL=style.css.map */

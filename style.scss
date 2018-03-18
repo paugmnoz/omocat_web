@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$font: 'Work Sans',
+sans-serif;
+a {
+    text-decoration: none;
+    font-family: $font;
+}
+
+//NAVEGACION
+.logoCat {
+    width: 95%;
+    margin: auto;
+    padding-top: 1em;
+    .icon {
+        width: 2.25%;
+        height: auto;
+        margin-right: 1em;
+    }
+    a {
+        color: black;
+        font-weight: 900;
+        font-size: 30;
+        font-variant: small-caps;
+    }
+}
+
+//CONTENIDO
+.container {
+    //--------------SECCION DE INICIO ---------------
+    .welcome {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+       // background-color: aqua;
+        .leftImgs {
+            width: 30% !important;
+            height: auto;
+            margin-top: 8em;
+            margin-bottom: 6.5em;
+            float: left;
+        }
+        .seasonQuote {
+            margin: 10em auto 0 auto;
+            z-index: 5;
+            h1 {
+                font-family: $font;
+                font-size: 40;
+                font-weight: 900;
+                background: salmon;
+                &.second {
+                    margin-left: 1em;
+                }
+                &.third {
+                    margin-left: 6em;
+                }
+            }
+        }
+        .rightImgs {
+            position: absolute;
+            float: right;
+            width: 37%;
+            height: auto;
+            margin-top: -4em;
+            margin-right: 120px;
+        }
+    } //------------------------SECCIÓN EQUIPO --------------
+    .theTeam {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .teamPhoto {
+            background-color: #ff4746;
+            height: 400px;
+            width: 50%;
+            h1 {
+                font-family: $font;
+                font-size: 30;
+                font-weight: 900;
+                color: white;
+                &.second {
+                    margin-left: 1em;
+                }
+            }
+            img {
+                width: 50%;
+                margin: auto;
+            }
+        }
+        .descriptionTeam {
+            width: 50%;
+            padding: 2em;
+            h1 {
+                font-family: $font;
+                font-size: 30;
+                font-weight: 900;
+                color: black;
+            }
+            .description {
+                width: 60%;
+                p {
+                    font-family: $font;
+                    font-weight: 200;
+                    font-size: 16;
+                    margin-bottom: 1em;
+                }
+            }
+            .rect {
+                width: 50px;
+                height: 10px;
+                background-color: #ff4746;
+            }
+        } //--------------------SERVICES-----------------
+    }
+    h1 {
+        font-family: $font;
+        font-size: 30;
+        font-weight: 900;
+        color: black;
+    }
+    .services {
+        width: 80%;
+        margin: auto;
+        height: 500px;
+        background-color: rgb(134, 114, 250);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: space-between;
+        align-items: center;
+        .service {
+            width: 20%;
+            order: 0;
+            flex: 0 1 auto;
+            align-self: flex-start;
+            h2 {
+                font-family: $font;
+                font-size: 22;
+                font-weight: 800;
+                font-variant: small-caps;
+                color: black;
+            }
+            img {
+                width: 100%;
+            }
+            .rect {
+                width: 100px;
+                height: 10px;
+                background-color: #ff4746;
+            }
+        }
+    } //--------------------GALLERY-----------------
+    .bestsellersGallery {
+        width: 100%;
+        background-color: #2bb8c0;
+        h1 {
+            font-family: $font;
+            font-size: 30;
+            font-weight: 900;
+            color: white;
+        }
+
+        .gallery{
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    } //--------------------SPECICIFICATIONS-----------------
+    .specifications {
+        width: 100%;
+        height: 500px;
+        background-color: rgb(214, 250, 114);
+        display: flex;
+        flex-direction: row;
+        .stuffDetails {
+            width: 50%;
+            padding: 8em 2em 2em 10em;
+            h1 {
+                margin-bottom: 1em;
+            }
+            p {
+                font-family: $font;
+                font-weight: 400;
+                font-size: 16;
+                margin-bottom: 1em;
+            }     
+        }
+
+        .product {
+            width: 50%;
+            background-color: #fbeb00;  
+            img {
+                height:100%;
+            }
+
+        }
+    } //--------------------FOOTER-----------------
+    .footer {
+        width: 100%;
+        height: 500px;
+        background-color: rgb(134, 114, 250);
+    }
+}
