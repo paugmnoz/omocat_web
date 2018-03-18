@@ -229,19 +229,22 @@ a {
 
         .newsletter{
             display: block;
+            margin:50% 0 0 7%;
             p {
                 font-family: $font;
                 font-weight: 700;
                 font-size: 21;
-                margin-bottom: 1em;
+                margin-bottom: 0.7em;
             }   
             input {
                 display: block;
                 padding: 5px 2px 1px 2px;
-                border-bottom: black;
+                border: none;
+                border-bottom: 2px solid black;
                 font-family: $font;
                 font-weight: 400;
                 font-size: 16;
+                margin-bottom: 1em;
             }
             button {
                 padding: 7px 15px 7px 10px;

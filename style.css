@@ -250,22 +250,25 @@ a {
 
 .container .footer .realFooter .newsletter {
   display: block;
+  margin: 50% 0 0 7%;
 }
 
 .container .footer .realFooter .newsletter p {
   font-family: "Work Sans", sans-serif;
   font-weight: 700;
   font-size: 21;
-  margin-bottom: 1em;
+  margin-bottom: 0.7em;
 }
 
 .container .footer .realFooter .newsletter input {
   display: block;
   padding: 5px 2px 1px 2px;
-  border-bottom: black;
+  border: none;
+  border-bottom: 2px solid black;
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   font-size: 16;
+  margin-bottom: 1em;
 }
 
 .container .footer .realFooter .newsletter button {
