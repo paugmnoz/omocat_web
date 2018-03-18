@@ -139,7 +139,6 @@ a {
   width: 80%;
   margin: auto;
   height: 500px;
-  background-color: #8672fa;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -197,7 +196,6 @@ a {
 .container .specifications {
   width: 100%;
   height: 500px;
-  background-color: #d6fa72;
   display: flex;
   flex-direction: row;
 }
@@ -229,7 +227,54 @@ a {
 
 .container .footer {
   width: 100%;
-  height: 500px;
-  background-color: #8672fa;
+}
+
+.container .footer .artist {
+  width: 12%;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -480px;
+}
+
+.container .footer .realFooter {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+}
+
+.container .footer .realFooter .aboutlinks {
+  width: 65%;
+  height: 400px;
+  background-color: #f3a5b2;
+}
+
+.container .footer .realFooter .newsletter {
+  display: block;
+}
+
+.container .footer .realFooter .newsletter p {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  font-size: 21;
+  margin-bottom: 1em;
+}
+
+.container .footer .realFooter .newsletter input {
+  display: block;
+  padding: 5px 2px 1px 2px;
+  border-bottom: black;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16;
+}
+
+.container .footer .realFooter .newsletter button {
+  padding: 7px 15px 7px 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16;
 }
 /*# sourceMappingURL=style.css.map */
