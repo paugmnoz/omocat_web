@@ -35,14 +35,16 @@ a {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 100%;
-       // background-color: aqua;
+        width: 100%; // background-color: aqua;
         .leftImgs {
-            width: 30% !important;
+            width: 30%;
             height: auto;
             margin-top: 8em;
             margin-bottom: 6.5em;
             float: left;
+            img {
+                width: 100%;
+            }
         }
         .seasonQuote {
             margin: 10em auto 0 auto;
@@ -61,12 +63,14 @@ a {
             }
         }
         .rightImgs {
-            position: absolute;
             float: right;
             width: 37%;
             height: auto;
             margin-top: -4em;
             margin-right: 120px;
+            img {
+                width: 100%;
+            }
         }
     } //------------------------SECCIÓN EQUIPO --------------
     .theTeam {
@@ -77,27 +81,48 @@ a {
             background-color: #ff4746;
             height: 400px;
             width: 50%;
-            h1 {
-                font-family: $font;
-                font-size: 30;
-                font-weight: 900;
-                color: white;
-                &.second {
-                    margin-left: 1em;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            .weAre {
+                order: 0;
+                flex: 0 1 auto;
+                align-self: auto; // background: #fbeb00;
+                h1 {
+                    font-family: $font;
+                    font-size: 30;
+                    font-weight: 900;
+                    color: white;
+                    &.second {
+                        margin-left: 1em;
+                    }
                 }
             }
-            img {
-                width: 50%;
-                margin: auto;
+            .teamImgDiv {
+                order: 0;
+                flex: 0 1 auto;
+                align-self: auto; //background: #fbeb00;
+                width: 60%;
+                img {
+                    order: 0;
+                    flex: 0 1 auto;
+                    align-self: auto;
+                    margin: auto;
+                    width: 100%;
+                }
             }
         }
         .descriptionTeam {
             width: 50%;
-            padding: 2em;
+            padding: 5em 0 0 2em;
             h1 {
                 font-family: $font;
                 font-size: 30;
                 font-weight: 900;
+                margin-bottom: 1em;
                 color: black;
             }
             .description {
@@ -108,6 +133,9 @@ a {
                     font-size: 16;
                     margin-bottom: 1em;
                 }
+                p:last-child {
+                    margin-bottom: 3em;
+                }
             }
             .rect {
                 width: 50px;
@@ -116,17 +144,20 @@ a {
             }
         } //--------------------SERVICES-----------------
     }
-    h1 {
-        font-family: $font;
-        font-size: 30;
-        font-weight: 900;
-        color: black;
+    .titleSectionServ {
+        width: 80%;
+        margin: auto;
+        h1 {
+            font-family: $font;
+            font-size: 30;
+            font-weight: 900;
+            color: black;
+        }
     }
     .services {
         width: 80%;
         margin: auto;
-        height: 500px;
-       // background-color: rgb(134, 114, 250);
+        height: 500px; // background-color: rgb(134, 114, 250);
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -164,10 +195,8 @@ a {
             font-weight: 900;
             color: white;
         }
-
-        .gallery{
+        .gallery {
             width: 100%;
-
             img {
                 width: 100%;
                 height: auto;
@@ -176,10 +205,15 @@ a {
     } //--------------------SPECICIFICATIONS-----------------
     .specifications {
         width: 100%;
-        height: 500px;
-        //background-color: rgb(214, 250, 114);
+        height: 500px; //background-color: rgb(214, 250, 114);
         display: flex;
         flex-direction: row;
+        h1 {
+            font-family: $font;
+            font-size: 30;
+            font-weight: 900;
+            color: black;
+        }
         .stuffDetails {
             width: 50%;
             padding: 8em 2em 2em 10em;
@@ -191,72 +225,110 @@ a {
                 font-weight: 400;
                 font-size: 16;
                 margin-bottom: 1em;
-            }     
+            }
         }
-
         .product {
             width: 50%;
-            background-color: #fbeb00;  
+            background-color: #fbeb00;
+            display: flex;
+            justify-content: center;
             img {
-                height:100%;
+                height: 100%;
             }
-
         }
     } //--------------------FOOTER-----------------
-
-  
     .footer {
         width: 100%;
-
-   
-       .artist {
-        width: 12%;
-        border-radius: 50%;
-        position: absolute;
-        margin-top: -480px;
-    }
-
-    .realFooter {
-        display: flex;
-        flex-direction: row;
-        margin-top: 100px;
-
-        .aboutlinks {
-            width: 65%;
-            height: 400px;
-            background-color: #f3a5b2;
+        .artist {
+            width: 12%;
+            border-radius: 50%;
+            position: absolute;
+            margin-left: 2%;
+            margin-top: -480px;
         }
+        .realFooter {
+            display: flex;
+            flex-direction: row;
+            align-content: flex-end;
+            margin-top: 100px;
+            .aboutlinks {
+                width: 65%;
+                height: 400px;
+                background-color: #f3a5b2;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-content: stretch;
+                align-items: flex-end;
+                .links {
+                    order: 0;
+                    flex: 0 1 auto;
+                    align-self: auto;
+                    margin-top: 30%;
+                    padding-right: 10%;
 
-        .newsletter{
-            display: block;
-            margin:50% 0 0 7%;
-            p {
-                font-family: $font;
-                font-weight: 700;
-                font-size: 21;
-                margin-bottom: 0.7em;
-            }   
-            input {
+                    h3 {
+                        font-family: $font;
+                        font-weight: 800;
+                        color: white;
+                    }
+
+                    .ul {
+                        list-style: none;
+                        color: white;
+
+                        li:last-child {
+                            margin-bottom: 1em;
+                        }
+                        &.social   {
+                            &.about {
+                                display: inline-block;
+                            }
+                            
+                        }
+                    }
+                }
+                .iconFooter {
+                    order: 0;
+                    flex: 0 1 auto;
+                    align-self: auto;
+                    padding-right: 14.5%;
+
+                    img {
+                        width: 60%;
+                    }
+                }
+            }
+            .newsletter {
                 display: block;
-                padding: 5px 2px 1px 2px;
-                border: none;
-                border-bottom: 2px solid black;
-                font-family: $font;
-                font-weight: 400;
-                font-size: 16;
-                margin-bottom: 1em;
-            }
-            button {
-                padding: 7px 15px 7px 10px;
-                border: none;
-                background-color: black;
-                color: white;
-                font-family: $font;
-                font-weight: 600;
-                font-size: 16;
+                margin: 50% 0 0 7%;
+                p {
+                    font-family: $font;
+                    font-weight: 700;
+                    font-size: 21;
+                    margin-bottom: 0.7em;
+                }
+                input {
+                    display: block;
+                    padding: 5px 2px 1px 2px;
+                    border: none;
+                    border-bottom: 2px solid black;
+                    font-family: $font;
+                    font-weight: 400;
+                    font-size: 16;
+                    margin-bottom: 1em;
+                }
+                button {
+                    padding: 7px 15px 7px 10px;
+                    border: none;
+                    background-color: black;
+                    color: white;
+                    font-family: $font;
+                    font-weight: 600;
+                    font-size: 16;
+                }
             }
         }
-    }
-      
     }
 }
