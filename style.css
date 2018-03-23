@@ -380,7 +380,7 @@ a {
 
 .container .specifications .stuffDetails {
   width: 50%;
-  padding: 8em 2em 2em 10em;
+  padding: 8em 2em 2em 5%;
 }
 
 .container .specifications .stuffDetails h1 {
@@ -541,6 +541,9 @@ a {
     -ms-flex: 50%;
     flex: 0 50% auto;
     width: 80%;
+  }
+  .services {
+    height: 600px;
   }
   .servDiv {
     flex-direction: column;
