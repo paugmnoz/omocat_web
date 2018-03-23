@@ -25,18 +25,27 @@ $(window).scroll(function() {
 
     if ($(this).scrollTop()>0)
      {
+        $('.promo').fadeIn();
+
         $('.typoLogo').fadeOut();
-        $('.promo').fadeOut();
         $('.menuOptions').fadeIn();
         $('.bottommenuOptions').fadeOut();
 
      }
     else
      {
-        $('.promo').fadeIn();
       $('.typoLogo').fadeIn();
+      $('.promo').fadeOut();
+
       $('.menuOptions').fadeOut();
       $('.bottommenuOptions').fadeIn();
 
      }
+ });
+
+
+ var promo = document.getElementById("promo");
+ promo.addEventListener('click', function(){
+     console.log("sdfasdlhfañsdjfkmasdñ");
+     promo.remove();
  });
