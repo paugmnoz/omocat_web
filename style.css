@@ -9,6 +9,16 @@ a {
   transition: all 0.2s;
 }
 
+.promo {
+  width: 40%;
+  position: absolute;
+  margin: 7em 0 0 30%;
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
 .globalNav {
   width: 100%;
   padding-left: 5%;

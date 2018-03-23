@@ -26,12 +26,14 @@ $(window).scroll(function() {
     if ($(this).scrollTop()>0)
      {
         $('.typoLogo').fadeOut();
+        $('.promo').fadeOut();
         $('.menuOptions').fadeIn();
         $('.bottommenuOptions').fadeOut();
 
      }
     else
      {
+        $('.promo').fadeIn();
       $('.typoLogo').fadeIn();
       $('.menuOptions').fadeOut();
       $('.bottommenuOptions').fadeIn();
