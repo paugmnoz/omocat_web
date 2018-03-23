@@ -12,9 +12,13 @@
 
 <body>
 
-    <nav class="logoCat">
+    <nav class="globalNav">
         <img class="icon" src="resources/icon.png" alt="">
-        <a href="#">Omocat</a>
+        <a href="#" class="typoLogo">Omocat</a>
+        <a href="#" class="menuOptions">clothing</a>
+        <a href="#" class="menuOptions">artwork</a>
+        <a href="#" class="menuOptions">us</a>
+        <a href="#" class="menuOptions">contact</a>
     </nav>
 
     <div class="container">
@@ -31,8 +35,14 @@
             <div class="rightImgs">
                 <img src="resources/welcome/b1.png" alt="">
             </div>
-        </section>
 
+
+        </section>
+        <nav class="bottomNav">
+            <a href="#" class="bottommenuOptions">clothing</a>
+            <a href="#" class="bottommenuOptions">artwork</a>
+            <a href="#" class="bottommenuOptions">us</a>
+        </nav>
         <section class="theTeam">
             <div class="teamPhoto">
                 <div class="weAre">
@@ -64,42 +74,81 @@
 
 
         <section class="services">
+            <div class="servDiv">
+                <div class="service">
+                    <br/>
+                        <h2>CLOTHING</h2>
+                        <div class="rect"></div>
+                    <div>
 
-            <div class="service">
-                <img src="resources/stuff/services_a_1.jpg" alt="">
-                <h2>CLOTHING</h2>
-                <div class="rect"></div>
+                        <div class="frontFace">
+                            <img src="resources/stuff/services_a_1.jpg" alt="">
+                        </div>
+                        <div class="backFace">
+                            <h2>CLOTHING</h2>
+                            <p>Finde the best and uniques shirts, sweateres and hasdfasdfasd</p>
+                            <div class="rect"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="service">
+                        <h2>NICE</h2>
+                        <h2>PRINTED STUFF</h2>
+                        <div class="rect"></div>
+                        <div>
+                                <div class="frontFace">
+                                        <img src="resources/stuff/services_b_1.jpg" alt="">
+                                    </div>
+                                    <div class="backFace">
+                                            <img src="resources/stuff/services_b_2.jpg" alt="">                       
+                                    </div>
+                                    
+                
+                        </div>
+                  
+                </div>
+
+                <div class="service">
+                       <br/>
+                        <h2>ACCESORIES</h2>
+                        <div class="rect"></div>
+
+                        <div>
+                            <div class="frontFace">
+                                <img src="resources/stuff/services_c_1.jpg" alt="">
+                            </div>
+                            <div class="backFace">
+                                    <h2>ACCESORIES</h2>
+                                    <p>Finde the best and uniques shirts, sweateres and hasdfasdfasd</p>
+                                <div class="rect"></div>
+                            </div>
+                        </div>
+
+                        
+    
+              
             </div>
 
-
-            <div class="service">
-                <h2>NICE</h2>
-                <h2>PRINTED STUFF</h2>
-                <div class="rect"></div>
-                <img src="resources/stuff/services_b_1.jpg" alt="">
-            </div>
-
-
-            <div class="service">
-                <img src="resources/stuff/services_c_1.jpg" alt="">
-                <h2>ACCESORIES</h2>
-                <div class="rect"></div>
-            </div>
         </section>
         <section class="bestsellersGallery">
             <h1>BEST SELLERS . . .</h1>
             <div class="gallery">
                 <img class="slide" src="resources/gallery/slide1.png">
                 <img class="slide" src="resources/gallery/slide2.png">
+                <div class="btnControl">
+                    <button class="btn btndisplayLeft" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="btn btndisplayRight" onclick="plusDivs(1)">&#10095;</button>
 
-                <button class="btn blackbtn btndisplayLeft" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="btn w3-black btndisplayRight" onclick="plusDivs(1)">&#10095;</button>
+                </div>
 
             </div>
         </section>
 
         <section class="specifications">
-            <div class="stuffDetails">
+            <div class="stuffDetails spechItem">
                 <h1>SPECIFICATIONS</h1>
                 <p>Original design by the team or another artists </p>
                 <p>UNISEX</p>
@@ -107,7 +156,7 @@
                 <p>Wash cold inside-out</p>
                 <p>Dry low or hang dry</p>
             </div>
-            <div class="product">
+            <div class="product spechItem">
                 <img src="resources/specifications/shirt.jpg" alt="">
 
 
@@ -119,30 +168,30 @@
             <div class="realFooter">
                 <div class="aboutlinks">
                     <div class="links">
-                            <h3>info</h3>
-                            <ul class="ul about">
-                                <li>
-                                    <a>About OMOCAT</a>
-                                </li>
-                                <li>
-                                    <a>Contact us</a>
-                                </li>
-                                <li>
-                                    <a>FAQ</a>
-                                </li>
-                            </ul>
-                            <h3>Social media</h3>
-                            <ul  class="ul social about ">
-                                <li>
-                                    <a>Fb</a>
-                                </li>
-                                <li>
-                                    <a>Twt</a>
-                                </li>
-                            </ul>
-        
+                        <h3>info</h3>
+                        <ul class="ul about">
+                            <li>
+                                <a>About OMOCAT</a>
+                            </li>
+                            <li>
+                                <a>Contact us</a>
+                            </li>
+                            <li>
+                                <a>FAQ</a>
+                            </li>
+                        </ul>
+                        <h3>Social media</h3>
+                        <ul class="ul social about ">
+                            <li>
+                                <a>Fb</a>
+                            </li>
+                            <li>
+                                <a>Twt</a>
+                            </li>
+                        </ul>
+
                     </div>
-                 
+
                     <div class="iconFooter">
                         <img class="icon" src="resources/icon.png" alt="">
 

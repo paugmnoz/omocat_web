@@ -20,3 +20,21 @@ function showDivs(n) {
     }
     x[slideIndex-1].style.display = "block";
 }
+
+$(window).scroll(function() {
+
+    if ($(this).scrollTop()>0)
+     {
+        $('.typoLogo').fadeOut();
+        $('.menuOptions').fadeIn();
+        $('.bottommenuOptions').fadeOut();
+
+     }
+    else
+     {
+      $('.typoLogo').fadeIn();
+      $('.menuOptions').fadeOut();
+      $('.bottommenuOptions').fadeIn();
+
+     }
+ });

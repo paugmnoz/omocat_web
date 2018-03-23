@@ -6,31 +6,53 @@
 a {
   text-decoration: none;
   font-family: "Work Sans", sans-serif;
+  transition: all 0.2s;
 }
 
-.logoCat {
-  width: 95%;
+.globalNav {
+  width: 100%;
+  padding-left: 5%;
   margin: auto;
   padding-top: 1em;
+  overflow: hidden;
+  position: fixed;
+  background-color: white;
+  padding-bottom: 0.5em;
+  z-index: 1000;
 }
 
-.logoCat .icon {
+.globalNav .icon {
   width: 2.25%;
   height: auto;
   margin-right: 1em;
 }
 
-.logoCat a {
+.globalNav a {
   color: black;
+  font-variant: small-caps;
+}
+
+.globalNav a.typoLogo {
   font-weight: 900;
   font-size: 30;
-  font-variant: small-caps;
+}
+
+.globalNav a.menuOptions:hover {
+  color: #ff4746;
+}
+
+.globalNav a.menuOptions {
+  font-weight: 700;
+  font-size: 21;
+  margin-right: 2em;
+  transition: 1s;
+  align-items: center;
 }
 
 .container .welcome {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 100%;
 }
 
@@ -47,7 +69,7 @@ a {
 }
 
 .container .welcome .seasonQuote {
-  margin: 10em auto 0 auto;
+  margin: 10em auto 0 10%;
   z-index: 5;
 }
 
@@ -55,7 +77,6 @@ a {
   font-family: "Work Sans", sans-serif;
   font-size: 40;
   font-weight: 900;
-  background: salmon;
 }
 
 .container .welcome .seasonQuote h1.second {
@@ -72,10 +93,34 @@ a {
   height: auto;
   margin-top: -4em;
   margin-right: 120px;
+  z-index: 100;
 }
 
 .container .welcome .rightImgs img {
   width: 100%;
+}
+
+.container .bottomNav {
+  position: absolute;
+  padding-left: 5%;
+  margin-top: -2em;
+}
+
+.container .bottomNav a {
+  color: black;
+  font-variant: small-caps;
+}
+
+.container .bottomNav a.bottommenuOptions {
+  font-weight: 700;
+  font-size: 21;
+  margin-right: 2em;
+  transition: 1s;
+  align-items: center;
+}
+
+.container .bottomNav a.bottommenuOptions:hover {
+  color: #ff4746;
 }
 
 .container .theTeam {
@@ -165,6 +210,8 @@ a {
 .container .titleSectionServ {
   width: 80%;
   margin: auto;
+  margin-bottom: 2em;
+  margin-top: 3em;
 }
 
 .container .titleSectionServ h1 {
@@ -177,23 +224,26 @@ a {
 .container .services {
   width: 80%;
   margin: auto;
-  height: 500px;
+  height: 600px;
+}
+
+.container .services .servDiv {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  align-content: space-between;
-  align-items: center;
+  align-content: space-around;
+  align-items: flex-start;
 }
 
-.container .services .service {
-  width: 20%;
+.container .services .servDiv .service {
+  width: 30%;
   order: 0;
   flex: 0 1 auto;
-  align-self: flex-start;
+  align-self: auto;
 }
 
-.container .services .service h2 {
+.container .services .servDiv .service h2 {
   font-family: "Work Sans", sans-serif;
   font-size: 22;
   font-weight: 800;
@@ -201,14 +251,52 @@ a {
   color: black;
 }
 
-.container .services .service img {
-  width: 100%;
-}
-
-.container .services .service .rect {
+.container .services .servDiv .service .rect {
   width: 100px;
   height: 10px;
   background-color: #ff4746;
+}
+
+.container .services .servDiv .service .frontFace {
+  width: 20%;
+  margin-top: 3em;
+  position: absolute;
+  transform: perspective(0) rotateY(0deg);
+  backface-visibility: hidden;
+  transition: transform .5s linear 0s;
+}
+
+.container .services .servDiv .service .frontFace img {
+  width: 100%;
+}
+
+.container .services .servDiv .service .frontFace:hover {
+  transform: perspective(0) rotateY(-180deg);
+}
+
+.container .services .servDiv .service .backFace {
+  position: absolute;
+  transform: perspective(0) rotateY(180deg);
+  backface-visibility: hidden;
+  transition: transform .5s linear 0s;
+  background-color: #ff4746;
+}
+
+.container .services .servDiv .service .backFace h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 22;
+  font-weight: 800;
+  font-variant: small-caps;
+  color: black;
+}
+
+.container .services .servDiv .service .backFace p {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+}
+
+.container .services .servDiv .service .backFace:hover {
+  transform: perspective(0) rotateY(0deg);
 }
 
 .container .bestsellersGallery {
@@ -221,10 +309,13 @@ a {
   font-size: 30;
   font-weight: 900;
   color: white;
+  padding: 1em;
+  float: right;
 }
 
 .container .bestsellersGallery .gallery {
   width: 100%;
+  height: auto;
 }
 
 .container .bestsellersGallery .gallery img {
@@ -232,11 +323,39 @@ a {
   height: auto;
 }
 
+.container .bestsellersGallery .gallery .btnControl {
+  display: block;
+  position: absolute;
+  margin-top: -30%;
+  width: 100%;
+}
+
+.container .bestsellersGallery .gallery .btnControl .btn {
+  padding: 1em;
+  color: white;
+  background-color: #2bb8c0;
+  border: none;
+}
+
+.container .bestsellersGallery .gallery .btnControl .btn.btndisplayRight {
+  float: right;
+}
+
 .container .specifications {
   width: 100%;
   height: 500px;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.container .specifications .spechItem {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
 }
 
 .container .specifications h1 {
@@ -264,6 +383,7 @@ a {
 
 .container .specifications .product {
   width: 50%;
+  height: 500px;
   background-color: #fbeb00;
   display: flex;
   justify-content: center;
@@ -373,5 +493,30 @@ a {
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
   font-size: 16;
+}
+
+@media (min-width: 800px) and (max-width: 1100px) {
+  .theTeam {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    height: 800px;
+  }
+  .theTeam .teamPhoto {
+    -ms-flex: 50%;
+    flex: 0 50% auto;
+    width: 80%;
+  }
+  .theTeam .descriptionTeam {
+    -ms-flex: 50%;
+    flex: 0 50% auto;
+    width: 80%;
+  }
+  .servDiv {
+    flex-direction: column;
+  }
+  .specifications {
+    flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */

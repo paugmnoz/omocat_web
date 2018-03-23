@@ -8,13 +8,20 @@ sans-serif;
 a {
     text-decoration: none;
     font-family: $font;
+    transition: all 0.2s;
 }
 
 //NAVEGACION
-.logoCat {
-    width: 95%;
+.globalNav {
+    width: 100%;
+    padding-left: 5%;
     margin: auto;
     padding-top: 1em;
+    overflow: hidden;
+    position: fixed;
+    background-color: white;
+    padding-bottom: 0.5em;
+    z-index: 1000;
     .icon {
         width: 2.25%;
         height: auto;
@@ -22,9 +29,21 @@ a {
     }
     a {
         color: black;
-        font-weight: 900;
-        font-size: 30;
         font-variant: small-caps;
+        &.typoLogo {
+            font-weight: 900;
+            font-size: 30;
+        }
+        &.menuOptions:hover {
+            color: #ff4746;
+        }
+        &.menuOptions {
+            font-weight: 700;
+            font-size: 21;
+            margin-right: 2em;
+            transition: 1s;
+            align-items: center;
+        }
     }
 }
 
@@ -34,7 +53,7 @@ a {
     .welcome {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         width: 100%; // background-color: aqua;
         .leftImgs {
             width: 30%;
@@ -47,13 +66,12 @@ a {
             }
         }
         .seasonQuote {
-            margin: 10em auto 0 auto;
+            margin: 10em auto 0 10%;
             z-index: 5;
             h1 {
                 font-family: $font;
                 font-size: 40;
                 font-weight: 900;
-                background: salmon;
                 &.second {
                     margin-left: 1em;
                 }
@@ -68,8 +86,28 @@ a {
             height: auto;
             margin-top: -4em;
             margin-right: 120px;
+            z-index: 100;
             img {
                 width: 100%;
+            }
+        }
+    }
+    .bottomNav {
+        position: absolute;
+        padding-left: 5%;
+        margin-top: -2em;
+        a {
+            color: black;
+            font-variant: small-caps;
+            &.bottommenuOptions {
+                font-weight: 700;
+                font-size: 21;
+                margin-right: 2em;
+                transition: 1s;
+                align-items: center;
+            }
+            &.bottommenuOptions:hover {
+                color: #ff4746;
             }
         }
     } //------------------------SECCIÓN EQUIPO --------------
@@ -147,6 +185,8 @@ a {
     .titleSectionServ {
         width: 80%;
         margin: auto;
+        margin-bottom: 2em;
+        margin-top: 3em;
         h1 {
             font-family: $font;
             font-size: 30;
@@ -157,32 +197,66 @@ a {
     .services {
         width: 80%;
         margin: auto;
-        height: 500px; // background-color: rgb(134, 114, 250);
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-content: space-between;
-        align-items: center;
-        .service {
-            width: 20%;
-            order: 0;
-            flex: 0 1 auto;
-            align-self: flex-start;
-            h2 {
-                font-family: $font;
-                font-size: 22;
-                font-weight: 800;
-                font-variant: small-caps;
-                color: black;
-            }
-            img {
-                width: 100%;
-            }
-            .rect {
-                width: 100px;
-                height: 10px;
-                background-color: #ff4746;
+        height: 600px; // background-color: rgb(134, 114, 250);
+        .servDiv {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: space-around;
+            align-items: flex-start;
+            .service {
+                width: 30%;
+                order: 0;
+                flex: 0 1 auto;
+                align-self: auto;
+                h2 {
+                    font-family: $font;
+                    font-size: 22;
+                    font-weight: 800;
+                    font-variant: small-caps;
+                    color: black;
+                }
+                .rect {
+                    width: 100px;
+                    height: 10px;
+                    background-color: #ff4746;
+                }
+                .frontFace {
+                    width: 20%;
+                    margin-top: 3em;
+                    position: absolute;
+                    transform: perspective( 0) rotateY( 0deg);
+                    backface-visibility: hidden;
+                    transition: transform .5s linear 0s;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .frontFace:hover {
+                    transform: perspective( 0) rotateY( -180deg);
+                }
+                .backFace {
+                    position: absolute;
+                    transform: perspective( 0) rotateY( 180deg);
+                    backface-visibility: hidden;
+                    transition: transform .5s linear 0s;
+                    background-color: #ff4746;
+                    h2 {
+                        font-family: $font;
+                        font-size: 22;
+                        font-weight: 800;
+                        font-variant: small-caps;
+                        color: black;
+                    }
+                    p {
+                        font-family: $font;
+                        color: white;
+                    }
+                }
+                .backFace:hover {
+                    transform: perspective( 0) rotateY( 0deg);
+                }
             }
         }
     } //--------------------GALLERY-----------------
@@ -194,12 +268,31 @@ a {
             font-size: 30;
             font-weight: 900;
             color: white;
+            padding: 1em;
+            float: right;
         }
         .gallery {
             width: 100%;
+            height: auto;
             img {
                 width: 100%;
                 height: auto;
+            }
+            .btnControl {
+                display: block;
+                position: absolute;
+                margin-top: -30%;
+                width: 100%;
+                .btn {
+                    padding: 1em;
+                    color: white;
+                    background-color: #2bb8c0;
+                    border: none;
+                    &.btndisplayLeft {}
+                    &.btndisplayRight {
+                        float: right;
+                    }
+                }
             }
         }
     } //--------------------SPECICIFICATIONS-----------------
@@ -208,6 +301,15 @@ a {
         height: 500px; //background-color: rgb(214, 250, 114);
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+        .spechItem {
+            order: 0;
+            flex: 0 1 auto;
+            align-self: auto;
+        }
         h1 {
             font-family: $font;
             font-size: 30;
@@ -229,6 +331,7 @@ a {
         }
         .product {
             width: 50%;
+            height: 500px;
             background-color: #fbeb00;
             display: flex;
             justify-content: center;
@@ -267,25 +370,21 @@ a {
                     align-self: auto;
                     margin-top: 30%;
                     padding-right: 10%;
-
                     h3 {
                         font-family: $font;
                         font-weight: 800;
                         color: white;
                     }
-
                     .ul {
                         list-style: none;
                         color: white;
-
                         li:last-child {
                             margin-bottom: 1em;
                         }
-                        &.social   {
+                        &.social {
                             &.about {
                                 display: inline-block;
                             }
-                            
                         }
                     }
                 }
@@ -294,7 +393,6 @@ a {
                     flex: 0 1 auto;
                     align-self: auto;
                     padding-right: 14.5%;
-
                     img {
                         width: 60%;
                     }
@@ -330,5 +428,30 @@ a {
                 }
             }
         }
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1100px) {
+    .theTeam {
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        flex-direction: column;
+        height: 800px;
+        .teamPhoto {
+            -ms-flex: 50%;
+            flex: 0 50% auto;
+            width: 80%;
+        }
+        .descriptionTeam {
+            -ms-flex: 50%;
+            flex: 0 50% auto;
+            width: 80%;
+        }
+    }
+    .servDiv {
+        flex-direction: column;
+    }
+    .specifications {
+        flex-direction: column;
     }
 }
