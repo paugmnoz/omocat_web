@@ -3,8 +3,8 @@
     padding: 0;
 }
 
-$font: 'Work Sans',
-sans-serif;
+$font: 'Work Sans',sans-serif;
+$loadingTime: 2s;
 a {
     text-decoration: none;
     font-family: $font;
@@ -32,6 +32,9 @@ a {
     background-color: white;
     padding-bottom: 0.5em;
     z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     .icon {
         width: 2.25%;
         height: auto;
@@ -368,6 +371,7 @@ a {
                 width: 65%;
                 height: 400px;
                 background-color: #f3a5b2;
+                animation: loading $loadingTime linear ;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: nowrap;
@@ -402,15 +406,17 @@ a {
                     order: 0;
                     flex: 0 1 auto;
                     align-self: auto;
-                    padding-right: 14.5%;
+                    padding-right: 10.5%;
                     img {
                         width: 60%;
                     }
                 }
             }
             .newsletter {
+                width: 35%;
                 display: block;
-                margin: 50% 0 0 7%;
+                position: absolute;
+                margin-left: 70%;
                 p {
                     font-family: $font;
                     font-weight: 700;
@@ -435,18 +441,34 @@ a {
                     font-family: $font;
                     font-weight: 600;
                     font-size: 16;
+                    transition: all 0.2s;
+                }
+
+                button:hover {
+                    background-color:#ff4746;
+                    
                 }
             }
         }
     }
 }
 
+
+
+@keyframes loading {
+    0% {
+      width: 0;
+    } 100% {
+      width: 65%;
+    }
+  }
+
 @media (min-width: 800px) and (max-width: 1100px) {
     .theTeam {
         -webkit-flex-direction: column;
         -moz-flex-direction: column;
         flex-direction: column;
-        height: 800px;
+        height: auto;
         .teamPhoto {
             -ms-flex: 50%;
             flex: 0 50% auto;
